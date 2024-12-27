@@ -8,6 +8,7 @@
 
 # Maven directories and files
 /target/               # Maven build output
+target/
 *.log                  # Maven log files
 
 # Neovim and Editor files
