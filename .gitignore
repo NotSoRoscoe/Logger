@@ -1,0 +1,47 @@
+# IDE-specific files
+.classpath
+.project
+.settings/
+
+# Compiled Java class files
+*.class
+
+# Maven directories and files
+/target/               # Maven build output
+*.log                  # Maven log files
+
+# Neovim and Editor files
+/.local/               # Local config or plugin files
+/.config/nvim/         # Neovim-specific settings
+*.swp                  # Swap files
+*.swo                  # Swap files
+*.un~                  # Backup files
+
+# IDE-specific files
+/.idea/                # IntelliJ IDEA settings
+*.iml                  # IntelliJ module files
+.vscode/               # VS Code settings
+.classpath             # Eclipse classpath file
+.project               # Eclipse project file
+.settings/             # Eclipse settings directory
+
+# OS/Environment files
+.DS_Store              # macOS files
+Thumbs.db              # Windows thumbnail cache
+
+# Logs and temporary files
+*.log                  # Log files
+*.tmp                  # Temporary files
+*.bak                  # Backup files
+
+# Java specific files
+*.jar                  # Java archive files
+*.war                  # Web archive files
+*.ear                  # Enterprise archive files
+
+# Test reports
+/test-output/          # TestNG output
+/coverage/             # Code coverage reports
+
+# Dependency directories
+/lib/                  # Local dependency directory
