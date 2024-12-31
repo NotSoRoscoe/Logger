@@ -2,10 +2,10 @@ package rdw.logger;
 
 public class Logger
 {
-    private static Logger instance;
+    protected static Logger instance;
     private LogLevel logLevel = LogLevel.ERROR;
 
-    private Logger() {
+    protected Logger() {
     }
     
     public static Logger getInstance() {
