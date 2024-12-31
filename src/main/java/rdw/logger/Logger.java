@@ -3,12 +3,12 @@ package rdw.logger;
 public class Logger
 {
     private static Logger instance;
-    private static LogLevel logLevel = LogLevel.ERROR;
+    private LogLevel logLevel = LogLevel.ERROR;
 
     private Logger() {
     }
     
-    public static Logger getLogger() {
+    public static Logger getInstance() {
         if (instance == null) {
             instance = new Logger();
         }
@@ -23,24 +23,22 @@ public class Logger
      * @param message The String Log message
      * @return True if the level was able to print, false otherwise.
     */
-    public static boolean print(LogLevel level, String s) { 
+    public void log(LogLevel level, String s) { 
         if (withinLevelThreshold(level)) {
-            System.out.println(s);
-            return true;
+            System.out.println("[" + level.toString() + "] " + s);
         }
-        return false;
     }
 
-    public static void setLogLevel(LogLevel level) {
+    public void setLogLevel(LogLevel level) {
         logLevel = level;
     }
 
-    public static LogLevel getLogLevel() {
+    public LogLevel getLogLevel() {
         return logLevel;
     }
 
-    private static boolean withinLevelThreshold(LogLevel level) {
-        return logLevel.getSeverity() <= level.getSeverity();
+    private boolean withinLevelThreshold(LogLevel level) {
+        return logLevel.ordinal() <= level.ordinal();
     }
 
     
